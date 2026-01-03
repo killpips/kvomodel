@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KILLPIPS - KVO Model</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-gradient"></div>
+        <div class="grid-overlay"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- SECTION 1: Header & Introduction -->
+        <section class="section hero-section" id="hero">
+            <div class="section-content">
+                <div class="brand-logo animate-fade-in">
+                    <div class="logo-ring"></div>
+                    <div class="logo-ring ring-2"></div>
+                    <div class="logo-text">KP</div>
+                </div>
+                <h1 class="main-title animate-slide-up">KILLPIPS</h1>
+                <p class="subtitle animate-slide-up delay-1">MIND & MARKETS</p>
+                <div class="title-divider animate-scale-x delay-2"></div>
+                <h2 class="model-title animate-slide-up delay-2">KVO MODEL</h2>
+                <p class="model-subtitle animate-fade-in delay-3">ADVANCED MARKET STRUCTURE TOOL FOR READING<br>CONTEXT,
+                    MOMENTUM, AND INSTITUTIONAL BEHAVIOR</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: How the Market Moves -->
+        <section class="section market-moves-section" id="market-moves">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">◈</span>
+                    HOW THE MARKET MOVES THROUGH
+                </h2>
+
+                <div class="concepts-grid">
+                    <div class="concept-card animate-on-scroll" data-delay="0">
+                        <div class="concept-icon range-icon">
+                            <svg viewBox="0 0 100 100">
+                                <path d="M10,50 Q25,30 40,50 T70,50 T100,50" fill="none" stroke="currentColor"
+                                    stroke-width="3" />
+                            </svg>
+                        </div>
+                        <h3 class="concept-title">Range</h3>
+                        <p class="concept-desc">Sideways market with no clear direction. Prices oscillate between
+                            support and resistance.</p>
+                    </div>
+
+                    <div class="concept-card animate-on-scroll" data-delay="100">
+                        <div class="concept-icon expansion-icon">
+                            <svg viewBox="0 0 100 100">
+                                <path d="M10,80 L30,60 L50,70 L70,30 L90,10" fill="none" stroke="currentColor"
+                                    stroke-width="3" />
+                            </svg>
+                        </div>
+                        <h3 class="concept-title">Expansions</h3>
+                        <p class="concept-desc">Strong directional impulsive move (trend) with high volume.</p>
+                    </div>
+
+                    <div class="concept-card animate-on-scroll" data-delay="200">
+                        <div class="concept-icon reversal-icon">
+                            <svg viewBox="0 0 100 100">
+                                <path d="M10,80 L40,20 L50,30 L90,70" fill="none" stroke="currentColor"
+                                    stroke-width="3" />
+                            </svg>
+                        </div>
+                        <h3 class="concept-title">Reversal</h3>
+                        <p class="concept-desc">Trend reversal on failure breakout levels and areas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Gaussian Curve -->
+        <section class="section gaussian-section" id="gaussian">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">📊</span>
+                    Gaussian Curve
+                </h2>
+
+                <div class="gaussian-svg-container animate-on-scroll">
+                    <svg viewBox="0 0 700 420" class="gaussian-curve-svg">
+                        <defs>
+                            <!-- Gradients for zones - Site themed colors -->
+                            <linearGradient id="redGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.9" />
+                                <stop offset="100%" style="stop-color:#0284c7;stop-opacity:0.7" />
+                            </linearGradient>
+                            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.6" />
+                            </linearGradient>
+                            <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.7" />
+                                <stop offset="100%" style="stop-color:#059669;stop-opacity:0.5" />
+                            </linearGradient>
+                            <clipPath id="curveClip">
+                                <path d="M 50 360 
+                                         Q 80 360, 110 355
+                                         Q 150 345, 190 320
+                                         Q 230 280, 270 220
+                                         Q 310 140, 350 80
+                                         Q 360 65, 370 80
+                                         Q 410 140, 450 220
+                                         Q 490 280, 530 320
+                                         Q 570 345, 610 355
+                                         Q 640 360, 670 360
+                                         L 670 360 L 50 360 Z" />
+                            </clipPath>
+                        </defs>
+
+                        <!-- Title -->
+                        <text x="360" y="35" fill="#ffffff" font-family="Orbitron, monospace" font-size="22"
+                            text-anchor="middle" font-weight="700">68-95-99.7 Rule</text>
+
+                        <!-- Y-Axis -->
+                        <line x1="70" y1="60" x2="70" y2="360" stroke="#52525b" stroke-width="2" />
+                        <text x="20" y="210" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="11"
+                            text-anchor="middle" transform="rotate(-90, 20, 210)">Probability Density</text>
+
+                        <!-- Y-Axis Labels -->
+                        <text x="60" y="68" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="10"
+                            text-anchor="end">0.40</text>
+                        <text x="60" y="105" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="10"
+                            text-anchor="end">0.35</text>
+                        <text x="60" y="142" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="10"
+                            text-anchor="end">0.30</text>
+                        <text x="60" y="179" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="10"
+                            text-anchor="end">0.25</text>
+                        <text x="60" y="216" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="10"
+                            text-anchor="end">0.20</text>
+                        <text x="60" y="253" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="10"
+                            text-anchor="end">0.15</text>
+                        <text x="60" y="290" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="10"
+                            text-anchor="end">0.10</text>
+                        <text x="60" y="327" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="10"
+                            text-anchor="end">0.05</text>
+                        <text x="60" y="364" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="10"
+                            text-anchor="end">0.00</text>
+
+                        <!-- X-Axis -->
+                        <line x1="50" y1="360" x2="670" y2="360" stroke="#52525b" stroke-width="2" />
+
+                        <!-- Colored Zones (from outside to inside) -->
+                        <!-- Green Zone (99.73% - outermost tails) -->
+                        <g clip-path="url(#curveClip)">
+                            <rect x="50" y="60" width="620" height="300" fill="url(#greenGradient)" />
+                        </g>
+
+                        <!-- Blue Zone (95.45%) -->
+                        <g clip-path="url(#curveClip)">
+                            <rect x="110" y="60" width="500" height="300" fill="url(#blueGradient)" />
+                        </g>
+
+                        <!-- Red Zone (68.27% - center) -->
+                        <g clip-path="url(#curveClip)">
+                            <rect x="220" y="60" width="280" height="300" fill="url(#redGradient)" />
+                        </g>
+
+                        <!-- Gaussian Curve Outline -->
+                        <path d="M 50 360 
+                                 Q 80 360, 110 355
+                                 Q 150 345, 190 320
+                                 Q 230 280, 270 220
+                                 Q 310 140, 350 80
+                                 Q 360 65, 370 80
+                                 Q 410 140, 450 220
+                                 Q 490 280, 530 320
+                                 Q 570 345, 610 355
+                                 Q 640 360, 670 360" fill="none" stroke="#ffffff" stroke-width="3"
+                            stroke-linecap="round" class="curve-path" />
+
+                        <!-- Vertical divider lines -->
+                        <line x1="110" y1="355" x2="110" y2="60" stroke="#ffffff" stroke-width="1.5"
+                            stroke-dasharray="4,4" opacity="0.6" />
+                        <line x1="220" y1="280" x2="220" y2="60" stroke="#ffffff" stroke-width="1.5"
+                            stroke-dasharray="4,4" opacity="0.6" />
+                        <line x1="360" y1="65" x2="360" y2="60" stroke="#ffffff" stroke-width="1.5" opacity="0.6" />
+                        <line x1="500" y1="280" x2="500" y2="60" stroke="#ffffff" stroke-width="1.5"
+                            stroke-dasharray="4,4" opacity="0.6" />
+                        <line x1="610" y1="355" x2="610" y2="60" stroke="#ffffff" stroke-width="1.5"
+                            stroke-dasharray="4,4" opacity="0.6" />
+
+                        <!-- Percentage Labels with backgrounds -->
+                        <!-- 68.27% -->
+                        <rect x="310" y="110" width="100" height="28" rx="4" fill="rgba(0,0,0,0.7)" />
+                        <text x="360" y="130" fill="#ffffff" font-family="JetBrains Mono, monospace" font-size="16"
+                            text-anchor="middle" font-weight="600">68.27%</text>
+
+                        <!-- 95.45% -->
+                        <rect x="310" y="200" width="100" height="28" rx="4" fill="rgba(0,0,0,0.7)" />
+                        <text x="360" y="220" fill="#ffffff" font-family="JetBrains Mono, monospace" font-size="16"
+                            text-anchor="middle" font-weight="600">95.45%</text>
+
+                        <!-- 99.73% -->
+                        <rect x="310" y="290" width="100" height="28" rx="4" fill="rgba(0,0,0,0.7)" />
+                        <text x="360" y="310" fill="#ffffff" font-family="JetBrains Mono, monospace" font-size="16"
+                            text-anchor="middle" font-weight="600">99.73%</text>
+
+                        <!-- X-Axis Labels (Standard Deviations) -->
+                        <text x="110" y="385" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="13"
+                            text-anchor="middle">μ − 3σ</text>
+                        <text x="165" y="385" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="13"
+                            text-anchor="middle">μ − 2σ</text>
+                        <text x="220" y="385" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="13"
+                            text-anchor="middle">μ − σ</text>
+                        <text x="360" y="385" fill="#ffffff" font-family="JetBrains Mono, monospace" font-size="14"
+                            text-anchor="middle" font-weight="600">μ</text>
+                        <text x="500" y="385" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="13"
+                            text-anchor="middle">μ + σ</text>
+                        <text x="555" y="385" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="13"
+                            text-anchor="middle">μ + 2σ</text>
+                        <text x="610" y="385" fill="#a1a1aa" font-family="JetBrains Mono, monospace" font-size="13"
+                            text-anchor="middle">μ + 3σ</text>
+
+                        <!-- Small tick marks on X-axis -->
+                        <line x1="110" y1="360" x2="110" y2="370" stroke="#52525b" stroke-width="2" />
+                        <line x1="165" y1="360" x2="165" y2="370" stroke="#52525b" stroke-width="2" />
+                        <line x1="220" y1="360" x2="220" y2="370" stroke="#52525b" stroke-width="2" />
+                        <line x1="360" y1="360" x2="360" y2="370" stroke="#52525b" stroke-width="2" />
+                        <line x1="500" y1="360" x2="500" y2="370" stroke="#52525b" stroke-width="2" />
+                        <line x1="555" y1="360" x2="555" y2="370" stroke="#52525b" stroke-width="2" />
+                        <line x1="610" y1="360" x2="610" y2="370" stroke="#52525b" stroke-width="2" />
+                    </svg>
+                </div>
+
+
+                <div class="info-block animate-on-scroll">
+                    <h3 class="info-title">Applying the Gaussian bell to Range vs. Expansion</h3>
+
+                    <div class="stats-grid">
+                        <div class="stat-card range-stat">
+                            <div class="stat-percentage">70-80%</div>
+                            <div class="stat-label">Range (sideways market/consolidation)</div>
+                            <p class="stat-desc">Prices oscillate within a tight range (low volatility), corresponding
+                                to the wide central part of the bell curve (high probability of small movements).</p>
+                        </div>
+
+                        <div class="stat-card expansion-stat">
+                            <div class="stat-percentage">20-30%</div>
+                            <div class="stat-label">Expansion (strong impulsive trend)</div>
+                            <p class="stat-desc">Decisive directional moves (high volatility), corresponding to the
+                                tails of the bell curve (low probability, but high impact).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Volume Profile vs KVO Profile -->
+        <section class="section comparison-section" id="volume-vs-kvo">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">⚖️</span>
+                    Volume Profile vs KVO Profile
+                </h2>
+
+                <div class="comparison-text animate-on-scroll">
+                    <p>The Volume Profile represents volumes in a Gaussian form. The problem with the Volume Profile is
+                        that it forms gradually during the day as trades occur. The KVO Profile Heatmap, on the other
+                        hand, indicates at the start of the trading day which are the areas of interest where the price
+                        is likely to react.</p>
+                </div>
+
+                <div class="comparison-vertical">
+                    <div class="comparison-item-vertical animate-on-scroll" data-delay="0">
+                        <div class="comparison-label">Volume Profile at the end of day</div>
+                        <div class="image-frame large-compare">
+                            <img src="volumeprofileendoftheday.png" alt="Volume Profile End of Day">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="vs-divider-horizontal animate-on-scroll">VS</div>
+
+                    <div class="comparison-item-vertical animate-on-scroll" data-delay="200">
+                        <div class="comparison-label">KVO Profile at the beginning of the day</div>
+                        <div class="image-frame large-compare">
+                            <img src="KVOProfileStartofDay.png" alt="KVO Profile Start of Day">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Operational Advantage -->
+        <section class="section advantage-section" id="advantage">
+            <div class="section-content">
+                <div class="highlight-box animate-on-scroll">
+                    <p class="highlight-text">This is the first operational advantage, already having clear areas of
+                        range, environment change, reverting, reversal and buy/sell zones</p>
+                </div>
+
+                <div class="image-showcase large animate-on-scroll">
+                    <div class="image-frame">
+                        <img src="OperationalAdvantageZones.png" alt="Operational Advantage Zones">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Important Areas Comparison (BC3 vs Profile Heatmap) -->
+        <section class="section important-areas-section" id="important-areas">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">🎯</span>
+                    What Happens Around Important Areas
+                </h2>
+
+                <div class="comparison-vertical">
+                    <div class="comparison-item-vertical animate-on-scroll" data-delay="0">
+                        <div class="comparison-label">Here only with BC3</div>
+                        <div class="image-frame large-compare">
+                            <img src="BC3.png" alt="BC3 Around Important Areas">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="vs-divider-horizontal animate-on-scroll">+</div>
+
+                    <div class="comparison-item-vertical animate-on-scroll" data-delay="200">
+                        <div class="comparison-label">Here also with Profile Heatmap</div>
+                        <div class="image-frame large-compare">
+                            <img src="ProfileHeatmap.png" alt="With Profile Heatmap">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: KVO Profile Detail -->
+        <section class="section kvo-detail-section" id="kvo-detail">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">🔍</span>
+                    What does the KVO Profile indicate?
+                </h2>
+
+                <div class="detail-content animate-on-scroll">
+                    <p>It identifies static levels and dynamic levels through the profile, offering a deeper market
+                        reading. The thickness and length of the profile indicate the strength of a level, based on
+                        market reactions and how many times it has been tested. Additionally, it highlights
+                        liquidity-rich areas around the levels, helping to refine entries and place stop-losses in a
+                        more intelligent and precise way.</p>
+                </div>
+
+                <div class="image-showcase animate-on-scroll">
+                    <div class="image-frame large">
+                        <img src="KVOProfileDetail.png" alt="KVO Profile Detail">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Dynamic Profile Settings -->
+        <section class="section settings-section" id="settings">
+            <div class="section-content">
+                <div class="settings-info animate-on-scroll">
+                    <p>The setting is standard for static levels, we can instead choose the historical for the Dynamic
+                        Profile. I suggest using 2-week or 1-month dates for optimal viewing.</p>
+                </div>
+
+                <div class="image-showcase small animate-on-scroll">
+                    <div class="image-frame settings-frame">
+                        <img src="dynamicprofilesettings.PNG" alt="Dynamic Profile Settings">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Gaussian Bell Intraday Sessions -->
+        <section class="section sessions-section" id="sessions">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">🌍</span>
+                    Applying the Gaussian Bell Curve to Intraday Movements by Session
+                </h2>
+                <p class="section-subtitle animate-on-scroll">(Asia, London, NY)</p>
+
+                <div class="session-intro animate-on-scroll">
+                    <p>The concept of the Gaussian bell curve can be applied approximately to the intraday distribution
+                        of volatility and price movements related markets. In reality, intraday volatility often follows
+                        a U-shaped pattern (high at open/close, low in the middle), not perfectly Gaussian, but
+                        analogously:</p>
+                    <ul class="session-list">
+                        <li>The wide central part of the bell represents small and frequent movements (low
+                            volatility/range).</li>
+                        <li>The tails represent large and rare movements (high volatility/expansion).</li>
+                    </ul>
+                </div>
+
+                <div class="sessions-grid">
+                    <div class="session-card asia animate-on-scroll" data-delay="0">
+                        <div class="session-header">
+                            <span class="session-flag">🌏</span>
+                            <h3>Asia Session</h3>
+                            <span class="session-tag">(Tokyo/Sydney)</span>
+                        </div>
+                        <div class="session-percentage">20-30%</div>
+                        <p class="session-range">of the total daily range</p>
+                        <p class="session-desc">Low volatility, prices often in a tight range. Corresponds to the
+                            central part of the bell (high probability of small movements, consolidation).</p>
+                    </div>
+
+                    <div class="session-card london animate-on-scroll" data-delay="100">
+                        <div class="session-header">
+                            <span class="session-flag">🇬🇧</span>
+                            <h3>London Session</h3>
+                            <span class="session-tag">(European)</span>
+                        </div>
+                        <div class="session-percentage">50-70%</div>
+                        <p class="session-range">of the total daily range</p>
+                        <p class="session-desc">High liquidity and volatility, often sets the trend direction.
+                            Corresponds to the mid-to-high part (significant movements, frequent breakouts).</p>
+                    </div>
+
+                    <div class="session-card newyork animate-on-scroll" data-delay="200">
+                        <div class="session-header">
+                            <span class="session-flag">🇺🇸</span>
+                            <h3>New York Session</h3>
+                            <span class="session-tag">(USA)</span>
+                        </div>
+                        <div class="session-percentage">30-50%</div>
+                        <p class="session-range">of the total daily range (with the London-NY overlap concentrating the
+                            peak)</p>
+                        <p class="session-desc">High volatility, especially during the overlap (8-12 ET). Corresponds to
+                            the tails of the bell (strong impulsive moves, less "frequent" in pure time terms; high
+                            impact).</p>
+                    </div>
+                </div>
+
+                <div class="overlap-highlight animate-on-scroll">
+                    <div class="overlap-badge">⚡ London-NY Overlap</div>
+                    <p>Often contributes <strong>70-80%</strong> of the day's largest moves (extreme tails).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: Trading Price Action & Volume Canvas -->
+        <section class="section canvas-section" id="canvas">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">📈</span>
+                    Trading Price Action & Volume Canvas
+                </h2>
+
+                <div class="canvas-table animate-on-scroll">
+                    <div class="canvas-row header-row">
+                        <div class="canvas-cell">Phase</div>
+                        <div class="canvas-cell">Characteristics</div>
+                        <div class="canvas-cell">Session</div>
+                        <div class="canvas-cell">Strategy</div>
+                    </div>
+                    <div class="canvas-row range-row">
+                        <div class="canvas-cell phase-cell">
+                            <span class="phase-badge range-badge">Range</span>
+                        </div>
+                        <div class="canvas-cell">Sideways market, low volatility 70–80% of the time</div>
+                        <div class="canvas-cell">Asia session</div>
+                        <div class="canvas-cell">Acceptance on levels<br><strong>Buy low / Sell high</strong></div>
+                    </div>
+                    <div class="canvas-row expansion-row">
+                        <div class="canvas-cell phase-cell">
+                            <span class="phase-badge expansion-badge">Expansion</span>
+                        </div>
+                        <div class="canvas-cell">Impulsive move, high volume 20–30% of the time</div>
+                        <div class="canvas-cell">London & NY overlap</div>
+                        <div class="canvas-cell">Rejection / Breakout<br><strong>Follow momentum</strong></div>
+                    </div>
+                    <div class="canvas-row reversal-row">
+                        <div class="canvas-cell phase-cell">
+                            <span class="phase-badge reversal-badge">Reversal</span>
+                        </div>
+                        <div class="canvas-cell">End of move, distribution</div>
+                        <div class="canvas-cell">Session end or overlap</div>
+                        <div class="canvas-cell">Strong rejection of prior level<br><strong>Fade extremes</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: Operational Context with BC3 -->
+        <section class="section bc3-section" id="bc3">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">⚙️</span>
+                    OPERATIONAL CONTEXT WITH BC3
+                </h2>
+
+                <div class="image-showcase animate-on-scroll">
+                    <div class="image-frame">
+                        <img src="OperationalContextBC3.png" alt="Operational Context BC3">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+
+                <div class="bc3-note animate-on-scroll">
+                    <p>The only thing you need to set on days with reduced hours is the date.</p>
+                </div>
+
+                <div class="image-showcase small animate-on-scroll">
+                    <div class="image-frame settings-frame">
+                        <img src="ReducedHourSetting.PNG" alt="Reduced Hour Setting">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11: Strategy Pressure -->
+        <section class="section pressure-section" id="pressure">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">💪</span>
+                    STRATEGY PRESSURE
+                </h2>
+
+                <div class="pressure-points animate-on-scroll">
+                    <ul class="feature-list">
+                        <li>What Strategy Pressure represents</li>
+                        <li>Difference between: Movement - Pressure</li>
+                        <li>Pressure states: <span class="bullish">Bullish</span> – <span class="bearish">Bearish</span>
+                            - <span class="neutral">Range</span></li>
+                    </ul>
+                </div>
+
+                <div class="image-showcase animate-on-scroll">
+                    <div class="image-frame">
+                        <img src="StrategyPressureChart.png" alt="Strategy Pressure Chart">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 12: 5min vs 1min Comparison -->
+        <section class="section timeframe-section" id="timeframes">
+            <div class="section-content">
+                <div class="timeframe-comparison animate-on-scroll">
+                    <div class="timeframe-item">
+                        <div class="timeframe-label">5 min.</div>
+                        <div class="image-frame timeframe-frame">
+                            <img src="5min.PNG" alt="5 Minute Chart">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="timeframe-item">
+                        <div class="timeframe-label">1 min.</div>
+                        <div class="image-frame timeframe-frame">
+                            <img src="1min.PNG" alt="1 Minute Chart">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 13: Deep Chart Volume -->
+        <section class="section deepchart-section" id="deepchart">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">📉</span>
+                    DEEP CHART VOLUME
+                </h2>
+
+                <div class="objective-box animate-on-scroll">
+                    <span class="objective-label">Objective</span>
+                    <p>Introduce the structural reading layer of price.</p>
+                </div>
+
+                <div class="deepchart-features animate-on-scroll">
+                    <h3>What Deep Chart represents</h3>
+                    <ul class="feature-list">
+                        <li>Reading structure vs signals</li>
+                        <li>Identifying: Compression, Expansion, Structural failure</li>
+                        <li>Interaction between Deep Chart and KVO levels</li>
+                    </ul>
+                </div>
+
+                <div class="image-showcase animate-on-scroll">
+                    <div class="image-frame large">
+                        <img src="DeepChartExample.png" alt="Deep Chart Example">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 14: Killpips Deep Chart Guide -->
+        <section class="section guide-section" id="guide">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">📘</span>
+                    Killpips Deep Chart – Guide to Using Circles and Rings
+                </h2>
+
+                <div class="symbols-table animate-on-scroll">
+                    <div class="symbol-row header">
+                        <div class="symbol-cell">Symbol</div>
+                        <div class="symbol-cell">Meaning</div>
+                        <div class="symbol-cell">Primary Use</div>
+                    </div>
+                    <div class="symbol-row">
+                        <div class="symbol-cell"><span class="symbol-icon">🟢 🔴</span> Continuation</div>
+                        <div class="symbol-cell">Directional push</div>
+                        <div class="symbol-cell">Trend confirmation</div>
+                    </div>
+                    <div class="symbol-row">
+                        <div class="symbol-cell"><span class="symbol-icon">🟢</span> Absorption</div>
+                        <div class="symbol-cell">Active opposition</div>
+                        <div class="symbol-cell">Awareness zone</div>
+                    </div>
+                    <div class="symbol-row">
+                        <div class="symbol-cell"><span class="symbol-icon">🟢</span> Exhaustion</div>
+                        <div class="symbol-cell">Loss of efficiency</div>
+                        <div class="symbol-cell">Management / exit</div>
+                    </div>
+                    <div class="symbol-row">
+                        <div class="symbol-cell"><span class="symbol-icon">🔵</span> Silent</div>
+                        <div class="symbol-cell">Preparation phase</div>
+                        <div class="symbol-cell">Structured waiting</div>
+                    </div>
+                    <div class="symbol-row">
+                        <div class="symbol-cell"><span class="symbol-icon">◯</span> Rings</div>
+                        <div class="symbol-cell">Quality of movement</div>
+                        <div class="symbol-cell">Fine timing</div>
+                    </div>
+                </div>
+
+                <div class="guide-intro animate-on-scroll">
+                    <p>The Deep Chart uses circles and rings to represent how the market is behaving in real time. They
+                        are not meant to tell you what to do, but to show what kind of behavior is currently taking
+                        place. Each symbol is a reading of market behavior, not an automatic signal.</p>
+                </div>
+
+                <!-- Continuation Circles -->
+                <div class="circle-type continuation animate-on-scroll">
+                    <h3><span class="circle-icon">🟢 🔴</span> Continuation Circles (Bullish / Bearish)</h3>
+                    <div class="circle-content">
+                        <div class="circle-block">
+                            <h4>🔹 What they represent</h4>
+                            <p>Continuation circles indicate that the market is pushing decisively in the current
+                                direction, with coherence and follow-through.</p>
+                            <ul>
+                                <li><span class="bullish">Green → bullish pressure</span></li>
+                                <li><span class="bearish">Red → bearish pressure</span></li>
+                            </ul>
+                            <p>The appearance of multiple circles in the same direction signals a progressive
+                                strengthening of the move.</p>
+                        </div>
+                        <div class="circle-block">
+                            <h4>🔹 How to use them</h4>
+                            <p>Read them only in the direction of the broader context. They support:</p>
+                            <ul>
+                                <li>continuation trades</li>
+                                <li>breakouts</li>
+                                <li>pullbacks aligned with the main direction</li>
+                            </ul>
+                            <p>Avoid using them against major reference levels</p>
+                            <p class="note">👉 They do not trigger entries — they confirm that the move is alive.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Absorption Circles -->
+                <div class="circle-type absorption animate-on-scroll">
+                    <h3><span class="circle-icon">🟠</span> Absorption Circles (Defensive / Distributive)</h3>
+                    <div class="circle-content">
+                        <div class="circle-block">
+                            <h4>🔹 What they represent</h4>
+                            <p>Absorption circles show that price is meeting active opposition:</p>
+                            <ul>
+                                <li>The market attempts to move</li>
+                                <li>A counterparty absorbs the pressure</li>
+                            </ul>
+                            <p>Visually, they highlight a friction zone.</p>
+                        </div>
+                        <div class="circle-block">
+                            <h4>🔹 How to use them</h4>
+                            <p>Observe them near key levels. They indicate:</p>
+                            <ul>
+                                <li>potential slowdown</li>
+                                <li>possible rotation</li>
+                                <li>preparation for an opposite move</li>
+                            </ul>
+                            <p>They do not imply immediate reversal</p>
+                            <p class="note">👉 These are awareness zones, not aggressive entry points.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exhaustion Circles -->
+                <div class="circle-type exhaustion animate-on-scroll">
+                    <h3><span class="circle-icon">🟠</span> Exhaustion Circles</h3>
+                    <div class="circle-content">
+                        <div class="circle-block">
+                            <h4>🔹 What they represent</h4>
+                            <p>Exhaustion circles indicate that a move is losing efficiency after an extended push.</p>
+                            <p>Price:</p>
+                            <ul>
+                                <li>reaches an extreme</li>
+                                <li>struggles to continue</li>
+                                <li>becomes vulnerable to pullbacks or reversals</li>
+                            </ul>
+                        </div>
+                        <div class="circle-block">
+                            <h4>🔹 How to use them</h4>
+                            <p>Ideal for:</p>
+                            <ul>
+                                <li>scaling out</li>
+                                <li>taking profits</li>
+                                <li>avoiding late chases</li>
+                            </ul>
+                            <p>Always read them within the broader context</p>
+                            <p class="note">👉 They are not automatic reversal signals, but warnings of declining
+                                momentum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silent Accumulation Circles -->
+                <div class="circle-type silent animate-on-scroll">
+                    <h3><span class="circle-icon">🔵</span> Silent Accumulation Circles</h3>
+                    <div class="circle-content">
+                        <div class="circle-block">
+                            <h4>🔹 What they represent</h4>
+                            <p>Silent accumulation circles highlight phases where:</p>
+                            <ul>
+                                <li>price moves very little</li>
+                                <li>but underlying preparation is taking place</li>
+                                <li>the market is quietly building direction</li>
+                            </ul>
+                            <p>These are silent phases, often preceding visible expansions.</p>
+                        </div>
+                        <div class="circle-block">
+                            <h4>🔹 How to use them</h4>
+                            <p>Do not trade them directly. Use them to:</p>
+                            <ul>
+                                <li>recognize buildup zones</li>
+                                <li>avoid impulsive trades</li>
+                                <li>prepare for future expansion</li>
+                            </ul>
+                            <p class="note">👉 They signal active waiting, not action.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rings -->
+                <div class="circle-type rings animate-on-scroll">
+                    <h3><span class="circle-icon">◯</span> Rings</h3>
+                    <div class="circle-content">
+                        <div class="circle-block">
+                            <h4>🔹 What they represent</h4>
+                            <p>Rings are the more sensitive and reactive version of circles. They express:</p>
+                            <ul>
+                                <li>the quality of the move</li>
+                                <li>the intensity of the reaction</li>
+                                <li>the operational weight of the event</li>
+                            </ul>
+                            <p>The size of the ring reflects how relevant that behavior is in the immediate context.</p>
+                        </div>
+                        <div class="circle-block">
+                            <h4>🔹 How to use them</h4>
+                            <p>Use them only around pre-defined levels. They help to:</p>
+                            <ul>
+                                <li>refine timing</li>
+                                <li>read acceptance or rejection</li>
+                                <li>decide whether to act or remain neutral</li>
+                            </ul>
+                            <p>Never use them in isolation</p>
+                            <p class="note">👉 They are the final execution lens, not the starting point.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Rule -->
+                <div class="core-rule animate-on-scroll">
+                    <div class="rule-icon">🟠</div>
+                    <div class="rule-content">
+                        <h3>Core Rule</h3>
+                        <p>Circles and rings do not say "enter." They say <strong>"this is what the market is doing
+                                right now."</strong></p>
+                        <p>Their value emerges only when they are placed within a logical sequence:</p>
+                        <div class="sequence">
+                            <span class="seq-item">Level</span>
+                            <span class="seq-arrow">→</span>
+                            <span class="seq-item">Context</span>
+                            <span class="seq-arrow">→</span>
+                            <span class="seq-item">Pressure</span>
+                            <span class="seq-arrow">→</span>
+                            <span class="seq-item">Micro-Structure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-showcase animate-on-scroll">
+                    <div class="image-frame large">
+                        <img src="LogicalSequence.png" alt="Logical Sequence">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 15: Strategy Pressure Operativity -->
+        <section class="section operativity-section" id="operativity">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">🎯</span>
+                    Strategy Pressure Operativity
+                </h2>
+
+                <div class="operativity-intro animate-on-scroll">
+                    <p>Strategy Pressure Operation is the operational arm of the KVO Model. It is not a trading system
+                        but indicates the possible trades following the schemes and trading patterns illustrated.</p>
+                </div>
+
+                <div class="operativity-block animate-on-scroll">
+                    <h3>Optimizing Trade Exits</h3>
+                    <p>Contrary to what is commonly believed, the most decisive element in a trade is not the entry, but
+                        the exit. A good exit can turn an average entry into a profitable trade, while a poor exit can
+                        completely invalidate even the best entry.</p>
+                    <p>Starting from this assumption, exits can be conceptualized and structured with the objective of
+                        optimizing profits and, at the same time, reducing risk.</p>
+                    <p>Market behavior is not random. When price and time are observed over large intraday samples,
+                        their distribution tends to follow statistical regularities that resemble a Gaussian curve. Most
+                        price movements concentrate around the center of the distribution, while extreme extensions
+                        occur much less frequently and are structurally unstable.</p>
+                </div>
+
+                <div class="operativity-block animate-on-scroll">
+                    <p>For this reason, not every portion of a price movement should be traded. The goal is not to
+                        capture the entire move, but to consistently extract the statistically probable part of it.</p>
+
+                    <div class="zones-explanation">
+                        <div class="zone-item core">
+                            <div class="zone-header">Core Probability Zone</div>
+                            <p>The central part of the distribution. This is where price moves most frequently, with the
+                                least resistance and the highest statistical reliability. This zone should always be
+                                considered the primary exit area and is where partial exits are statistically justified.
+                            </p>
+                        </div>
+
+                        <div class="zone-item extension">
+                            <div class="zone-header">Extension Zone</div>
+                            <p>This area represents a continuation of the move, but with a lower probability compared to
+                                the core. Reaching this zone requires structural coherence and orderly price flow. Exits
+                                in this area should be managed actively and never assumed as guaranteed.</p>
+                        </div>
+
+                        <div class="zone-item tail">
+                            <div class="zone-header">Statistical Tail</div>
+                            <p>The extreme part of the distribution. Movements in this zone are rare, unstable, and
+                                often followed by sharp pullbacks or reversals. While these extensions can occur, they
+                                should be treated as opportunistic exits rather than systematic targets.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="operativity-block animate-on-scroll">
+                    <h3>Understanding Pullbacks</h3>
+                    <p>Every directional movement naturally includes retracements. Pullbacks are not signs of reversal,
+                        but rather a normal expression of market breathing. However, when pullbacks exceed their average
+                        statistical size, the probability of continuation decreases significantly. For this reason,
+                        pullbacks define natural boundaries for exits and risk control.</p>
+                    <p>Exit proportions must also be adapted to the timeframe. On a 1-minute chart, movements develop
+                        quickly, ranges are smaller, and acceptable pullbacks are tighter. On a 5-minute chart,
+                        movements are wider, develop more slowly, and tolerate larger pullbacks. Exits must always scale
+                        with time to remain coherent.</p>
+                    <p>The purpose of structured exits is not to maximize a single trade, but to standardize behavior,
+                        capture the core of the movement, and avoid exposure to unstable extremes. Consistency, not
+                        perfection, is the real objective.</p>
+                </div>
+
+                <!-- Statistical Exit Zones Tables -->
+                <div class="stats-intro animate-on-scroll">
+                    <p>Based on these principles, it is possible to extract average statistical proportions for 1-minute
+                        and 5-minute candles in terms of points and pullbacks. These values are not fixed targets and do
+                        not represent predictions. They are operational reference zones designed to support
+                        decision-making and risk management.</p>
+                </div>
+
+                <!-- ES Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>E-mini S&P 500 (ES)</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">1.75–2.25 pts</div>
+                            <div class="table-cell">3.0–3.75 pts</div>
+                            <div class="table-cell">5.0–6.0 pts</div>
+                            <div class="table-cell">0.75–1.25 pts</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">3.5–4.5 pts</div>
+                            <div class="table-cell">6.0–7.5 pts</div>
+                            <div class="table-cell">10–12 pts</div>
+                            <div class="table-cell">2.0–3.0 pts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NQ Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>Nasdaq 100 (NQ)</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">5–7 pts</div>
+                            <div class="table-cell">10–14 pts</div>
+                            <div class="table-cell">18–25 pts</div>
+                            <div class="table-cell">3–5 pts</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">10–14 pts</div>
+                            <div class="table-cell">20–28 pts</div>
+                            <div class="table-cell">35–50 pts</div>
+                            <div class="table-cell">7–12 pts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YM Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>Dow Jones (YM)</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">10–14 pts</div>
+                            <div class="table-cell">18–25 pts</div>
+                            <div class="table-cell">35–45 pts</div>
+                            <div class="table-cell">6–9 pts</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">20–30 pts</div>
+                            <div class="table-cell">40–60 pts</div>
+                            <div class="table-cell">80–100 pts</div>
+                            <div class="table-cell">15–25 pts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RTY Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>Russell 2000 (RTY)</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">0.8–1.2 pts</div>
+                            <div class="table-cell">1.8–2.5 pts</div>
+                            <div class="table-cell">3.5–4.5 pts</div>
+                            <div class="table-cell">0.4–0.6 pts</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">1.8–2.5 pts</div>
+                            <div class="table-cell">3.5–5.0 pts</div>
+                            <div class="table-cell">7.0–9.0 pts</div>
+                            <div class="table-cell">1.0–1.8 pts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FDAX Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>FDAX</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">12–18 pts</div>
+                            <div class="table-cell">25–35 pts</div>
+                            <div class="table-cell">45–60 pts</div>
+                            <div class="table-cell">8–12 pts</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">25–35 pts</div>
+                            <div class="table-cell">50–70 pts</div>
+                            <div class="table-cell">100–130 pts</div>
+                            <div class="table-cell">20–30 pts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CL Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>Crude Oil (CL)</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">0.06–0.10</div>
+                            <div class="table-cell">0.14–0.20</div>
+                            <div class="table-cell">0.30–0.40</div>
+                            <div class="table-cell">0.04–0.06</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">0.12–0.18</div>
+                            <div class="table-cell">0.30–0.40</div>
+                            <div class="table-cell">0.60–0.80</div>
+                            <div class="table-cell">0.10–0.15</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GC Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>Gold (GC)</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">2.0–3.0 pts</div>
+                            <div class="table-cell">4.0–6.0 pts</div>
+                            <div class="table-cell">8.0–12.0 pts</div>
+                            <div class="table-cell">1.2–2.0 pts</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">5.0–7.0 pts</div>
+                            <div class="table-cell">10–14 pts</div>
+                            <div class="table-cell">18–25 pts</div>
+                            <div class="table-cell">3.0–5.0 pts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SI Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>Silver (SI)</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">0.04–0.06</div>
+                            <div class="table-cell">0.08–0.12</div>
+                            <div class="table-cell">0.18–0.25</div>
+                            <div class="table-cell">0.02–0.04</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">0.10–0.14</div>
+                            <div class="table-cell">0.20–0.28</div>
+                            <div class="table-cell">0.40–0.55</div>
+                            <div class="table-cell">0.06–0.10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HG Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>Copper (HG)</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">0.004–0.006</div>
+                            <div class="table-cell">0.009–0.013</div>
+                            <div class="table-cell">0.020–0.030</div>
+                            <div class="table-cell">0.002–0.004</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">0.010–0.015</div>
+                            <div class="table-cell">0.025–0.035</div>
+                            <div class="table-cell">0.050–0.070</div>
+                            <div class="table-cell">0.006–0.010</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NG Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>Natural Gas (NG)</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">0.020–0.030</div>
+                            <div class="table-cell">0.050–0.070</div>
+                            <div class="table-cell">0.100–0.150</div>
+                            <div class="table-cell">0.015–0.025</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">0.050–0.080</div>
+                            <div class="table-cell">0.120–0.180</div>
+                            <div class="table-cell">0.250–0.350</div>
+                            <div class="table-cell">0.040–0.070</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPX Table -->
+                <div class="instrument-table animate-on-scroll">
+                    <h4>SPX</h4>
+                    <div class="data-table">
+                        <div class="table-header">
+                            <div class="table-cell">Timeframe</div>
+                            <div class="table-cell">Core Zone</div>
+                            <div class="table-cell">Extension</div>
+                            <div class="table-cell">Tail</div>
+                            <div class="table-cell">Pullbacks</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">1 min</div>
+                            <div class="table-cell">2.5–3.5 pts</div>
+                            <div class="table-cell">5.0–7.0 pts</div>
+                            <div class="table-cell">10–14 pts</div>
+                            <div class="table-cell">1.5–2.5 pts</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell tf-cell">5 min</div>
+                            <div class="table-cell">6.0–8.0 pts</div>
+                            <div class="table-cell">12–18 pts</div>
+                            <div class="table-cell">25–35 pts</div>
+                            <div class="table-cell">4.0–6.0 pts</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">KILLPIPS</div>
+                <p class="footer-tagline">Mind & Markets • KVO Model</p>
+                <div class="footer-line"></div>
+
+                <!-- Disclaimer -->
+                <div class="disclaimer">
+                    <p class="disclaimer-title">⚠️ DISCLAIMER</p>
+                    <p class="disclaimer-text">
+                        This document is for <strong>educational and informational purposes only</strong>.
+                        It does not constitute financial advice, investment advice, trading advice, or any other sort of
+                        advice.
+                        Trading financial instruments involves substantial risk of loss and is not suitable for all
+                        investors.
+                        Past performance is not indicative of future results. You should not make any investment
+                        decision based solely on this content.
+                        Always conduct your own research and consult with a qualified financial advisor before making
+                        any trading decisions.
+                    </p>
+                    <p class="disclaimer-copyright">© 2026 KILLPIPS. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
