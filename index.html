@@ -20,8 +20,8 @@
             <a href="#hero" class="nav-logo">KILLPIPS</a>
             <ul class="nav-links">
                 <li><a href="#sessions">Sessions</a></li>
-                <li><a href="#kvo-detail">KVO Profile</a></li>
-                <li><a href="#pressure">Strategy Pressure</a></li>
+                <li><a href="#kvo-detail">KVO</a></li>
+                <li><a href="#pressure">Pressure</a></li>
                 <li><a href="#deepchart">Deep Chart</a></li>
                 <li><a href="#integrated-model" class="highlight-link">Integrated Operational Model</a></li>
             </ul>
@@ -578,6 +578,19 @@
         <!-- SECTION 12: 5min vs 1min Comparison -->
         <section class="section timeframe-section" id="timeframes">
             <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">⏱️</span>
+                    Multi-Timeframe Flow
+                </h2>
+                <div class="timeframe-intro animate-on-scroll">
+                    <p>The indicator integrates <strong>1-minute market activity</strong> into any higher timeframe. You
+                        see <em>micro-structure activity</em> without changing your chart.</p>
+                    <ul class="feature-list" style="max-width: 800px; margin: 20px auto;">
+                        <li>Intraday pressure visible on 5m, 15m+</li>
+                        <li>Anticipate moves before they become obvious</li>
+                        <li>Improve timing on entries and exits</li>
+                    </ul>
+                </div>
                 <div class="timeframe-comparison animate-on-scroll">
                     <div class="timeframe-item">
                         <div class="timeframe-label">5 min.</div>
@@ -844,6 +857,113 @@
                         <img src="LogicalSequence.png" alt="Logical Sequence">
                         <div class="image-glow"></div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 14b: Operational Manual -->
+        <section class="section manual-section" id="manual">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">
+                    <span class="title-icon">⚡</span>
+                    Operational Manual
+                </h2>
+
+                <!-- Imbalance Areas -->
+                <div class="imbalance-box animate-on-scroll">
+                    <div class="imbalance-content">
+                        <h3>Imbalance Areas (FVG)</h3>
+                        <p>The indicator automatically highlights price imbalance zones. Treat them as <strong>reaction
+                                zones</strong>, not entry signals.</p>
+                        <div class="imbalance-features">
+                            <div class="feature-item">
+                                <strong>What to Observe</strong>
+                                First touch reactions, acceptance/rejection, invalidations.
+                            </div>
+                            <div class="feature-item">
+                                <strong>Trend Context</strong>
+                                Imbalances are filtered by prevailing trend. Trade WITH the dominant direction.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Size & Position Logic -->
+                <div class="manual-grid"
+                    style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0;">
+                    <div class="schema-card" style="border-top: 4px solid var(--accent-cyan);">
+                        <div class="schema-header">
+                            <span class="schema-icon">📏</span>
+                            <span class="schema-title">Size Logic</span>
+                        </div>
+                        <ul class="schema-steps">
+                            <li><strong>Larger Circles:</strong> Stronger market participation</li>
+                            <li><strong>Smaller Circles:</strong> Weaker or early-stage activity</li>
+                        </ul>
+                    </div>
+                    <div class="schema-card" style="border-top: 4px solid var(--accent-cyan);">
+                        <div class="schema-header">
+                            <span class="schema-icon">📍</span>
+                            <span class="schema-title">Position Logic</span>
+                        </div>
+                        <ul class="schema-steps">
+                            <li><strong>Near Highs/Lows:</strong> Emotional / Climactic</li>
+                            <li><strong>Inside Range:</strong> Absorption / Balance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-grid schema-grid">
+                    <!-- Practical Trading Schemas -->
+                    <div class="schema-card bull animate-on-scroll" data-delay="0">
+                        <div class="schema-header">
+                            <span class="schema-icon">🔵</span>
+                            <span class="schema-title">Trend Continuation</span>
+                        </div>
+                        <ul class="schema-steps">
+                            <li>Clear directional move</li>
+                            <li>Continuation circles appear</li>
+                            <li>Price respects imbalance zones</li>
+                            <li>Hold or add on pullbacks</li>
+                        </ul>
+                    </div>
+
+                    <div class="schema-card bear animate-on-scroll" data-delay="100">
+                        <div class="schema-header">
+                            <span class="schema-icon">🟠</span>
+                            <span class="schema-title">Reversal / Rotation</span>
+                        </div>
+                        <ul class="schema-steps">
+                            <li>Exhaustion at extremes</li>
+                            <li>Absorption appears near key level</li>
+                            <li>Price fails to continue</li>
+                            <li>Prepare for rotation</li>
+                        </ul>
+                    </div>
+
+                    <div class="schema-card flat animate-on-scroll" data-delay="200">
+                        <div class="schema-header">
+                            <span class="schema-icon">⚪</span>
+                            <span class="schema-title">No-Trade Zone</span>
+                        </div>
+                        <ul class="schema-steps">
+                            <li>Silent signals dominate</li>
+                            <li>Overlapping imbalances</li>
+                            <li>Choppy price behavior</li>
+                            <li>Stand aside and wait</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Best Practices -->
+                <div class="best-practices-box animate-on-scroll">
+                    <h3>Best Practices</h3>
+                    <ul class="bp-list">
+                        <li>Use with clean charts</li>
+                        <li>Combine with Key Levels</li>
+                        <li>Check Session Context</li>
+                        <li>Context first, Execution second</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -1491,6 +1611,5 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 
 </html>
