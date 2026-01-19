@@ -2012,33 +2012,53 @@
                 <div class="stats-explanation animate-on-scroll">
                     <h3 class="subsection-title">Understanding the Statistical Table</h3>
                     <div class="stats-columns">
+                        <!-- Column 1: Killpips Force -->
                         <div class="stat-col">
                             <h4>Killpips Force</h4>
+                            <p class="col-desc">Relative break strength (ATR+Vol)</p>
                             <ul class="color-legend">
-                                <li><span class="dot green"></span> >120%: Superior quality</li>
+                                <li><span class="dot green"></span> >120%: Superior</li>
                                 <li><span class="dot yellow"></span> 90-120%: Average</li>
-                                <li><span class="dot orange"></span> 70-90%: Below average</li>
-                                <li><span class="dot red"></span>
-                                    <70%: Weak breaks</li>
+                                <li><span class="dot orange"></span> 70-90%: Below Avg</li>
+                                <li><span class="dot red"></span> &lt;70%: Weak</li>
                             </ul>
                         </div>
+
+                        <!-- Column 2: Target Percentages -->
                         <div class="stat-col">
-                            <h4>Target Percentages</h4>
+                            <h4>Target %</h4>
+                            <p class="col-desc">Probability of reaching targets</p>
                             <ul class="color-legend">
-                                <li><strong>T1%:</strong> % reaching first target</li>
-                                <li><strong>T2%:</strong> % reaching second target</li>
-                                <li><strong>T3%:</strong> % reaching maximum target</li>
-                                <li><em>Green >70% T1, >50% T2, >30% T3</em></li>
+                                <li><strong>T1%:</strong> Reach 1st target</li>
+                                <li><strong>T2%:</strong> Reach 2nd target</li>
+                                <li><strong>T3%:</strong> Reach Max target</li>
+                                <li><em>Green if >70% / >50% / >30%</em></li>
                             </ul>
                         </div>
+
+                        <!-- Column 3: Risks & Scenarios -->
                         <div class="stat-col">
-                            <h4>Retracement Stats</h4>
+                            <h4>Risks & Scenarios</h4>
+                            <p class="col-desc">Retracement & Range risks</p>
                             <ul class="color-legend">
-                                <li><strong>Retr before T1%:</strong> Inverse risk before target</li>
-                                <li><span class="dot green"></span>
-                                    <30%: Low risk</li>
-                                <li><span class="dot orange"></span> 30-50%: Moderate</li>
-                                <li><span class="dot red"></span> >50%: High inverse risk</li>
+                                <li><strong>Retr before T1%:</strong> Inverse risk</li>
+                                <li><span class="dot green"></span> &lt;30%: Low Risk</li>
+                                <li><span class="dot red"></span> >50%: High Risk</li>
+                                <li class="separator"></li>
+                                <li><strong>Sideways%:</strong> Stagnation risk</li>
+                                <li><span class="dot red"></span> >50%: High Range Prob</li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 4: Continuation (No Retrace) -->
+                        <div class="stat-col">
+                            <h4>Clean Continuation</h4>
+                            <p class="col-desc">Prob. of 'Clean Break' (No Retrace)</p>
+                            <ul class="color-legend">
+                                <li><strong>T1 no retr%:</strong> Straight to T1</li>
+                                <li><strong>T2 no retr%:</strong> T1 → T2 direct</li>
+                                <li><strong>T3 no retr%:</strong> T2 → T3 direct</li>
+                                <li><em>Green if >50% / >40% / >20%</em></li>
                             </ul>
                         </div>
                     </div>
