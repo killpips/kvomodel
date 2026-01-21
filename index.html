@@ -24,6 +24,7 @@
                 <li><a href="#pressure">Pressure</a></li>
                 <li><a href="#deepchart">Deep Chart</a></li>
                 <li><a href="#breakout-strategy">Statistical Breakout Strategy</a></li>
+                <li><a href="#decision-flowchart">K A I</a></li>
                 <li><a href="#integrated-model" class="highlight-link">Integrated Operational Model</a></li>
             </ul>
             <div class="mobile-menu-toggle">
@@ -1606,7 +1607,7 @@
 
                 <!-- Decision Flowchart SVG -->
                 <div class="flowchart-container animate-on-scroll">
-                    <h3 class="flowchart-title">Decision Algorithm</h3>
+                    <h2 class="section-title">K A I</h2>
                     <div class="flowchart-svg">
                         <svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
                             <!-- Definitions -->
@@ -2563,6 +2564,960 @@
                             <span class="definition">First, Second, Third target levels</span>
                         </div>
                     </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Decision Flowchart Section -->
+        <section id="decision-flowchart" class="section flowchart-section">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">K A I</h2>
+                <p class="section-subtitle animate-on-scroll">Complete trading decision process visualization</p>
+
+                <!-- SVG Flowchart -->
+                <div class="flowchart-container animate-on-scroll">
+                    <svg viewBox="0 0 850 1600" class="decision-svg">
+                        <!-- Definitions -->
+                        <defs>
+                            <marker id="arrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+                            </marker>
+                            <linearGradient id="boxGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e293b" />
+                                <stop offset="100%" style="stop-color:#0f172a" />
+                            </linearGradient>
+                            <linearGradient id="diamondGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6" />
+                                <stop offset="100%" style="stop-color:#1d4ed8" />
+                            </linearGradient>
+                            <filter id="glow2">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- ROW 1: Market Scan -->
+                        <g filter="url(#glow2)">
+                            <rect x="360" y="20" width="160" height="50" rx="10" fill="url(#boxGrad2)" stroke="#3b82f6"
+                                stroke-width="2" />
+                            <text x="440" y="50" text-anchor="middle" fill="#3b82f6" font-size="13" font-weight="700">📊
+                                Market Scan</text>
+                        </g>
+
+                        <!-- Arrow: Market Scan -> Range or Break -->
+                        <path d="M440 70 L440 100" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- ROW 2: Range or Break? Diamond -->
+                        <g filter="url(#glow2)">
+                            <polygon points="440,110 510,150 440,190 370,150" fill="url(#diamondGrad2)" stroke="#3b82f6"
+                                stroke-width="2" />
+                            <text x="440" y="155" text-anchor="middle" fill="#fff" font-size="11"
+                                font-weight="600">Range
+                                or Break?</text>
+                        </g>
+
+                        <!-- LEFT BRANCH: Range Path -->
+                        <path d="M370 150 L100 150 L100 350" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+                        <text x="180" y="140" fill="#94a3b8" font-size="11">Range</text>
+
+                        <!-- CENTER: Break Path Arrow -->
+                        <path d="M440 190 L440 230" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+                        <text x="455" y="215" fill="#10b981" font-size="11">Break</text>
+
+                        <!-- ROW 3: Breakout Analysis -->
+                        <g filter="url(#glow2)">
+                            <rect x="340" y="240" width="200" height="50" rx="10" fill="url(#boxGrad2)" stroke="#3b82f6"
+                                stroke-width="2" />
+                            <text x="440" y="270" text-anchor="middle" fill="#3b82f6" font-size="12"
+                                font-weight="600">Breakout Analysis</text>
+                        </g>
+
+                        <!-- Arrow: Breakout Analysis -> Multi-Timeframe -->
+                        <path d="M440 290 L440 330" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- ROW 4: Multi-Timeframe? Diamond -->
+                        <g filter="url(#glow2)">
+                            <polygon points="440,340 520,390 440,440 360,390" fill="url(#diamondGrad2)" stroke="#3b82f6"
+                                stroke-width="2" />
+                            <text x="440" y="395" text-anchor="middle" fill="#fff" font-size="11"
+                                font-weight="600">Multi-Timeframe?</text>
+                        </g>
+
+                        <!-- LEFT-CENTER: Weekly/Monthly Branch -->
+                        <path d="M360 390 L280 390 L280 480" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+                        <text x="240" y="380" fill="#8b5cf6" font-size="10">Weekly/Monthly</text>
+
+                        <!-- RIGHT: Daily Branch -->
+                        <path d="M520 390 L600 390 L600 480" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+                        <text x="560" y="380" fill="#f97316" font-size="11">Daily</text>
+
+                        <!-- Range Trade Box (Changed to GREEN) -->
+                        <g filter="url(#glow2)">
+                            <rect x="30" y="360" width="140" height="50" rx="8" fill="url(#boxGrad2)" stroke="#10b981"
+                                stroke-width="2" />
+                            <text x="100" y="390" text-anchor="middle" fill="#10b981" font-size="12"
+                                font-weight="600">Range Trade</text>
+                        </g>
+                        <path d="M100 410 L100 450" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Buy SD0 / Sell RD0 -->
+                        <g filter="url(#glow2)">
+                            <rect x="25" y="460" width="150" height="45" rx="8" fill="url(#boxGrad2)" stroke="#a78bfa"
+                                stroke-width="2" />
+                            <text x="100" y="488" text-anchor="middle" fill="#a78bfa" font-size="11">Buy SD0 / Sell
+                                RD0</text>
+                        </g>
+                        <path d="M100 505 L100 545" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Manage within range -->
+                        <g filter="url(#glow2)">
+                            <rect x="25" y="555" width="150" height="45" rx="8" fill="url(#boxGrad2)" stroke="#7c3aed"
+                                stroke-width="2" />
+                            <text x="100" y="583" text-anchor="middle" fill="#7c3aed" font-size="10">Manage within
+                                range</text>
+                        </g>
+
+                        <!-- ===== LEFT-CENTER COLUMN: Higher TF Trade ===== -->
+                        <!-- Higher TF Trade Box -->
+                        <g filter="url(#glow2)">
+                            <rect x="210" y="490" width="140" height="50" rx="8" fill="url(#boxGrad2)" stroke="#8b5cf6"
+                                stroke-width="2" />
+                            <text x="280" y="520" text-anchor="middle" fill="#8b5cf6" font-size="12"
+                                font-weight="600">Higher TF Trade</text>
+                        </g>
+                        <path d="M280 540 L280 580" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Larger targets -->
+                        <g filter="url(#glow2)">
+                            <rect x="215" y="590" width="130" height="40" rx="8" fill="url(#boxGrad2)" stroke="#a78bfa"
+                                stroke-width="2" />
+                            <text x="280" y="615" text-anchor="middle" fill="#a78bfa" font-size="11">Larger
+                                targets</text>
+                        </g>
+                        <path d="M280 630 L280 670" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Extended hold -->
+                        <g filter="url(#glow2)">
+                            <rect x="215" y="680" width="130" height="40" rx="8" fill="url(#boxGrad2)" stroke="#7c3aed"
+                                stroke-width="2" />
+                            <text x="280" y="705" text-anchor="middle" fill="#7c3aed" font-size="11">Extended
+                                hold</text>
+                        </g>
+
+                        <!-- ===== RIGHT COLUMN: Daily Analysis Path ===== -->
+                        <!-- Daily Analysis -->
+                        <g filter="url(#glow2)">
+                            <rect x="530" y="490" width="140" height="50" rx="8" fill="url(#boxGrad2)" stroke="#f97316"
+                                stroke-width="2" />
+                            <text x="600" y="520" text-anchor="middle" fill="#f97316" font-size="12"
+                                font-weight="600">Daily Analysis</text>
+                        </g>
+                        <path d="M600 540 L600 575" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Check Statistics -->
+                        <g filter="url(#glow2)">
+                            <rect x="530" y="585" width="140" height="45" rx="8" fill="url(#boxGrad2)" stroke="#92400e"
+                                stroke-width="2" />
+                            <text x="600" y="613" text-anchor="middle" fill="#d97706" font-size="11">Check
+                                Statistics</text>
+                        </g>
+                        <path d="M600 630 L600 665" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Verify Conditions -->
+                        <g filter="url(#glow2)">
+                            <rect x="530" y="675" width="140" height="45" rx="8" fill="url(#boxGrad2)" stroke="#60a5fa"
+                                stroke-width="2" />
+                            <text x="600" y="703" text-anchor="middle" fill="#60a5fa" font-size="11">Verify
+                                Conditions</text>
+                        </g>
+                        <path d="M600 720 L600 755" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Decision Score Diamond -->
+                        <g filter="url(#glow2)">
+                            <polygon points="600,765 660,805 600,845 540,805" fill="url(#diamondGrad2)" stroke="#3b82f6"
+                                stroke-width="2" />
+                            <text x="600" y="810" text-anchor="middle" fill="#fff" font-size="10"
+                                font-weight="600">Decision Score</text>
+                        </g>
+
+                        <!-- HIGH Path: Enter Trade -->
+                        <path d="M540 805 L420 805 L420 870" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+                        <text x="470" y="795" fill="#10b981" font-size="11" font-weight="bold">High</text>
+
+                        <!-- Enter Trade -->
+                        <g filter="url(#glow2)">
+                            <rect x="350" y="880" width="140" height="50" rx="10" fill="url(#boxGrad2)" stroke="#10b981"
+                                stroke-width="2" />
+                            <text x="420" y="910" text-anchor="middle" fill="#10b981" font-size="13"
+                                font-weight="700">Enter Trade</text>
+                        </g>
+                        <path d="M420 930 L420 965" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Manage Position -->
+                        <g filter="url(#glow2)">
+                            <rect x="350" y="975" width="140" height="40" rx="8" fill="url(#boxGrad2)" stroke="#6ee7b7"
+                                stroke-width="2" />
+                            <text x="420" y="1000" text-anchor="middle" fill="#6ee7b7" font-size="11">Manage
+                                Position</text>
+                        </g>
+                        <path d="M420 1015 L420 1070" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Scenario Update (Diamond) -->
+                        <g filter="url(#glow2)">
+                            <polygon points="420,1070 470,1100 420,1130 370,1100" fill="url(#diamondGrad2)"
+                                stroke="#3b82f6" stroke-width="2" />
+                            <text x="420" y="1105" text-anchor="middle" fill="#fff" font-size="10"
+                                font-weight="600">Scenario Update</text>
+                        </g>
+
+                        <!-- Scenario Branches -->
+                        <!-- Continue (Left) -->
+                        <path d="M370 1100 L370 1170" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow2)"
+                            fill="none" />
+                        <text x="360" y="1130" text-anchor="end" fill="#94a3b8" font-size="9">Continue</text>
+
+                        <!-- Flip (Right) -->
+                        <path d="M470 1100 L470 1170" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow2)"
+                            fill="none" />
+                        <text x="480" y="1130" text-anchor="start" fill="#94a3b8" font-size="9">Flip</text>
+
+                        <!-- Hold/Scale (Action - Green) -->
+                        <g filter="url(#glow2)">
+                            <rect x="325" y="1170" width="90" height="40" rx="6" fill="url(#boxGrad2)" stroke="#10b981"
+                                stroke-width="2" />
+                            <text x="370" y="1195" text-anchor="middle" fill="#10b981" font-size="10">Hold/Scale</text>
+                        </g>
+                        <path d="M370 1210 L400 1250" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Adapt/Exit (Action - Green) -->
+                        <g filter="url(#glow2)">
+                            <rect x="425" y="1170" width="90" height="40" rx="6" fill="url(#boxGrad2)" stroke="#10b981"
+                                stroke-width="2" />
+                            <text x="470" y="1195" text-anchor="middle" fill="#10b981" font-size="10">Adapt/Exit</text>
+                        </g>
+                        <path d="M470 1210 L400 1250" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- LOW Path: Skip Trade -->
+                        <path d="M660 805 L780 805 L780 870" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+                        <text x="755" y="795" fill="#ef4444" font-size="11" font-weight="bold">Low</text>
+
+                        <!-- Skip Trade (RED - Stop/No Trade) -->
+                        <g filter="url(#glow2)">
+                            <rect x="715" y="880" width="130" height="50" rx="10" fill="url(#boxGrad2)" stroke="#ef4444"
+                                stroke-width="2" />
+                            <text x="780" y="910" text-anchor="middle" fill="#ef4444" font-size="13"
+                                font-weight="700">Skip Trade</text>
+                        </g>
+                        <path d="M780 930 L780 965" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Next Setup (RED - related to skip) -->
+                        <g filter="url(#glow2)">
+                            <rect x="720" y="975" width="120" height="40" rx="8" fill="url(#boxGrad2)" stroke="#fca5a5"
+                                stroke-width="2" />
+                            <text x="780" y="1000" text-anchor="middle" fill="#fca5a5" font-size="11">Next Setup</text>
+                        </g>
+
+                        <!-- MEDIUM Path: Wait Confirm -->
+                        <path d="M600 845 L600 870" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+                        <text x="615" y="860" fill="#eab308" font-size="10">Medium</text>
+
+                        <!-- Wait Confirm (YELLOW - Caution/Wait) -->
+                        <g filter="url(#glow2)">
+                            <rect x="535" y="880" width="130" height="50" rx="10" fill="url(#boxGrad2)" stroke="#eab308"
+                                stroke-width="2" />
+                            <text x="600" y="910" text-anchor="middle" fill="#eab308" font-size="12"
+                                font-weight="700">Wait Confirm</text>
+                        </g>
+
+                        <!-- ===== BOTTOM: Exit & Record ===== -->
+                        <!-- Exit Box -->
+                        <g filter="url(#glow2)">
+                            <rect x="320" y="1250" width="160" height="45" rx="10" fill="url(#boxGrad2)"
+                                stroke="#3b82f6" stroke-width="2" />
+                            <text x="400" y="1278" text-anchor="middle" fill="#3b82f6" font-size="13"
+                                font-weight="700">Exit</text>
+                        </g>
+
+                        <!-- Connections to Exit (Curved) -->
+                        <path d="M100 600 Q100 1272 320 1272" stroke="#64748b" stroke-width="1.5"
+                            marker-end="url(#arrow2)" fill="none" />
+                        <path d="M280 720 Q280 1272 320 1272" stroke="#64748b" stroke-width="1.5" fill="none" />
+
+                        <!-- Record Results -->
+                        <g filter="url(#glow2)">
+                            <rect x="320" y="1330" width="160" height="45" rx="10" fill="url(#boxGrad2)"
+                                stroke="#6366f1" stroke-width="2" />
+                            <text x="400" y="1358" text-anchor="middle" fill="#6366f1" font-size="12"
+                                font-weight="700">📈 Record Results</text>
+                        </g>
+
+                        <!-- Missing Connections to Record Results -->
+                        <path d="M400 1295 L400 1330" stroke="#64748b" stroke-width="2" marker-end="url(#arrow2)"
+                            fill="none" />
+
+                        <!-- Connection from Wait Confirm to Record Results -->
+                        <path d="M600 930 Q600 1352 480 1352" stroke="#64748b" stroke-width="1.5"
+                            marker-end="url(#arrow2)" fill="none" />
+
+                        <!-- Connection from Next Setup to Record Results -->
+                        <path d="M780 1015 Q780 1352 480 1352" stroke="#64748b" stroke-width="1.5"
+                            marker-end="url(#arrow2)" fill="none" />
+
+                        <!-- Connection from Market Scan to Record Results (Loop) -->
+                        <path d="M480 1352 L820 1352 L820 45 L520 45" stroke="#64748b" stroke-width="1"
+                            stroke-dasharray="5,3" marker-end="url(#arrow2)" fill="none" opacity="0.5" />
+
+                    </svg>
+                </div>
+
+                <!-- Simplified Executive Version -->
+                <div class="key-elements-section animate-on-scroll">
+                    <h3 class="subsection-title">Simplified Executive Version</h3>
+                    <p class="key-elements-intro">KEY ELEMENTS EXPLANATION:</p>
+
+                    <div class="elements-grid">
+                        <!-- Color Code System -->
+                        <div class="element-card">
+                            <h4>🎨 Color Code System</h4>
+                            <ul class="color-codes">
+                                <li><span class="color-dot blue"></span> <strong>Blue:</strong> Analysis &amp; Decision
+                                    Points</li>
+                                <li><span class="color-dot green"></span> <strong>Green:</strong> Positive Actions /
+                                    Entry Points</li>
+                                <li><span class="color-dot yellow"></span> <strong>Yellow:</strong> Caution / Wait
+                                    States</li>
+                                <li><span class="color-dot purple"></span> <strong>Purple:</strong> Multi-Timeframe
+                                    Operations</li>
+                                <li><span class="color-dot red"></span> <strong>Red:</strong> Stop / No Trade</li>
+                                <li><span class="color-dot brown"></span> <strong>Brown:</strong> Statistical Analysis
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Icon Legend -->
+                        <div class="element-card">
+                            <h4>🔣 Icon Legend</h4>
+                            <ul class="icon-legend">
+                                <li>📊 <strong>Chart:</strong> Analysis Phase</li>
+                                <li>🔄 <strong>Arrows:</strong> Strategy Selection</li>
+                                <li>🎯 <strong>Target:</strong> Multi-Timeframe Trading</li>
+                                <li>⚡ <strong>Lightning:</strong> Decision Making</li>
+                                <li>⚙️ <strong>Gear:</strong> Active Management</li>
+                                <li>📥 <strong>Inbox:</strong> Exit Strategy</li>
+                                <li>📈 <strong>Graph:</strong> Feedback Loop</li>
+                            </ul>
+                        </div>
+
+                        <!-- Critical Decision Points -->
+                        <div class="element-card full-width">
+                            <h4>⚡ Critical Decision Points</h4>
+                            <div class="decision-points-grid">
+                                <div class="decision-point">
+                                    <span class="point-name">Range vs Break</span>
+                                    <span class="point-desc">Initial market state</span>
+                                </div>
+                                <div class="decision-point">
+                                    <span class="point-name">Multi-Timeframe Confirmation</span>
+                                    <span class="point-desc">Higher timeframe alignment</span>
+                                </div>
+                                <div class="decision-point">
+                                    <span class="point-name">Statistical Validation</span>
+                                    <span class="point-desc">Historical performance check</span>
+                                </div>
+                                <div class="decision-point">
+                                    <span class="point-name">ATR Confirmation</span>
+                                    <span class="point-desc">Current volatility verification</span>
+                                </div>
+                                <div class="decision-point">
+                                    <span class="point-name">Composite Score</span>
+                                    <span class="point-desc">Overall trade probability</span>
+                                </div>
+                                <div class="decision-point">
+                                    <span class="point-name">Scenario Monitoring</span>
+                                    <span class="point-desc">Real-time adaptation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABLE EXPLANATION -->
+                <div class="kai-content-section animate-on-scroll">
+                    <h3 class="subsection-title">Table Explanation</h3>
+
+                    <!-- Table Structure -->
+                    <div class="kai-block">
+                        <h4>📊 Table Structure</h4>
+                        <p>The indicator table is divided into 14 main columns showing detailed statistics on daily
+                            breaks, grouped by trading session (Asia, London, NY) and direction (Long/Short).</p>
+                    </div>
+
+                    <!-- Main Columns -->
+                    <div class="kai-block">
+                        <h4>📋 Main Columns</h4>
+                        <div class="kai-columns-grid">
+                            <div class="kai-column-item">
+                                <span class="column-name">Setup</span>
+                                <span class="column-desc">Identifies the configuration (e.g. "RD0 Long Asia")</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">Breaks</span>
+                                <span class="column-desc">Total number of recorded breaks</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">Killpips Force</span>
+                                <span class="column-desc">Relative strength of the break</span>
+                                <ul class="force-scale">
+                                    <li><span class="force-tag very-strong">120%+</span> Very strong (green)</li>
+                                    <li><span class="force-tag strong">90–120%</span> Strong (yellow)</li>
+                                    <li><span class="force-tag moderate">70–90%</span> Moderate (orange)</li>
+                                    <li><span class="force-tag weak">&lt;70%</span> Weak (red)</li>
+                                </ul>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">T1%</span>
+                                <span class="column-desc">Percentage of breaks reaching Target 1 (RD1/SD1)</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">T2%</span>
+                                <span class="column-desc">Percentage of breaks reaching Target 2 (RD2/SD2)</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">T3%</span>
+                                <span class="column-desc">Percentage of breaks reaching Target 3 (MAX/MIN)</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">Retr before T1%</span>
+                                <span class="column-desc">Retracement to the opposite level <em>before</em> T1</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">T1 retr%</span>
+                                <span class="column-desc">Retracement to the entry level <em>after</em> T1</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">T2 retr%</span>
+                                <span class="column-desc">Retracement to T1 <em>after</em> T2</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">T3 retr%</span>
+                                <span class="column-desc">Retracement to T2 <em>after</em> T3</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">Sideways%</span>
+                                <span class="column-desc">Sideways movement (no target and no retracement)</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">T1 no retr%</span>
+                                <span class="column-desc">T1 reached <em>without</em> retracement</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">T2 no retr%</span>
+                                <span class="column-desc">T2 reached <em>without</em> retracement after T1</span>
+                            </div>
+                            <div class="kai-column-item">
+                                <span class="column-name">T3 no retr%</span>
+                                <span class="column-desc">T3 reached <em>without</em> retracement after T2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Sections -->
+                    <div class="kai-block">
+                        <h4>📌 Additional Sections</h4>
+                        <ul class="kai-list">
+                            <li><strong>Current Breaks</strong> – Status of active breaks in the current day</li>
+                            <li><strong>Multi-Timeframe</strong> – Status of active weekly and monthly breaks</li>
+                            <li><strong>Scenario Analysis</strong> – Advanced analysis of the current market situation
+                            </li>
+                            <li><strong>Range Detection</strong> – Indicates whether price is in range (between RD0 and
+                                SD0)</li>
+                        </ul>
+                    </div>
+
+                    <!-- How to Use the Table -->
+                    <div class="kai-block">
+                        <h4>🔍 How to Use the Table</h4>
+                        <div class="kai-usage-grid">
+                            <div class="usage-card">
+                                <h5>Historical Analysis</h5>
+                                <ul>
+                                    <li>Check statistics by session</li>
+                                    <li>Look for sessions with high T1 percentages and low retracements</li>
+                                    <li>Identify sessions with Killpips Force &gt; 120%</li>
+                                </ul>
+                            </div>
+                            <div class="usage-card">
+                                <h5>Current Break</h5>
+                                <ul>
+                                    <li>Check if there is an active break</li>
+                                    <li>Verify strength (Killpips Force) and ATR confirmation</li>
+                                    <li>Monitor which targets have been reached</li>
+                                </ul>
+                            </div>
+                            <div class="usage-card">
+                                <h5>Scenario Analysis</h5>
+                                <ul>
+                                    <li>Follow the automatic recommendation</li>
+                                    <li>Consider the indicated probability</li>
+                                    <li>Take active multi-timeframes into account</li>
+                                </ul>
+                            </div>
+                            <div class="usage-card">
+                                <h5>Range Trading</h5>
+                                <ul>
+                                    <li>If <strong>IN RANGE</strong>, trade between RD0 and SD0</li>
+                                    <li>If <strong>OUT OF RANGE</strong>, wait for a break or a return to range</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DIAGRAM LEGEND -->
+                <div class="kai-content-section animate-on-scroll">
+                    <h3 class="subsection-title">Diagram Legend</h3>
+
+                    <div class="kai-legend-grid">
+                        <div class="legend-card">
+                            <h4>🔄 Main Phases</h4>
+                            <ul>
+                                <li><strong>Range Detection</strong> – Identifies market consolidation</li>
+                                <li><strong>Break Analysis</strong> – Statistical analysis of breakouts</li>
+                                <li><strong>Multi-Timeframe</strong> – Higher timeframe considerations</li>
+                                <li><strong>Risk Management</strong> – Position and stop-loss management</li>
+                            </ul>
+                        </div>
+                        <div class="legend-card">
+                            <h4>📊 Key Metrics</h4>
+                            <ul>
+                                <li><strong>Killpips Force</strong>: Combination of ATR and Volume</li>
+                                <li><strong>ATR Confirmation</strong>: Current ATR &gt; 65% of session average</li>
+                                <li><strong>Scenario Strength</strong>: Strength of the current scenario (0–200+)</li>
+                            </ul>
+                        </div>
+                        <div class="legend-card">
+                            <h4>✅ Decisions</h4>
+                            <ul>
+                                <li><strong>ENTER</strong>: When all metrics are positive</li>
+                                <li><strong>WAIT</strong>: When confirmations are missing</li>
+                                <li><strong>CLOSE</strong>: At target or stop-loss hit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OPERATIONAL TIPS -->
+                <div class="kai-content-section animate-on-scroll">
+                    <h3 class="subsection-title">Operational Tips</h3>
+
+                    <div class="kai-tips-grid">
+                        <div class="tip-card">
+                            <h4>📅 Session Priority</h4>
+                            <ul>
+                                <li>London and NY generally show better statistics</li>
+                                <li>Asia: higher caution due to retracements</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <h4>📈 Position Management</h4>
+                            <ul>
+                                <li>Scale out at T1, T2, T3</li>
+                                <li>Dynamic stop-loss after each target reached</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <h4>🕐 Multi-Timeframe</h4>
+                            <ul>
+                                <li>Weekly/monthly break = stronger position holding</li>
+                                <li>Timeframe alignment = higher probability</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <h4>🔀 Flip Detection</h4>
+                            <ul>
+                                <li>Monitor scenario changes</li>
+                                <li>Adapt strategy to the new context</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="kai-note">This diagram provides a structured decision-making framework to integrate into
+                        your presentation, showing the complete logical process from analysis to trade execution.</p>
+                </div>
+
+                <!-- COMPLETE LIST OF TABLE ITEMS -->
+                <div class="kai-content-section animate-on-scroll">
+                    <h3 class="subsection-title">Complete List of Killpips KVO Algo Table Items</h3>
+
+                    <!-- 1. Session Statistics Section -->
+                    <div class="kai-block">
+                        <h4>1. Session Statistics Section</h4>
+
+                        <div class="kai-subsection">
+                            <h5>1.1 Setup (Column 0)</h5>
+                            <ul class="kai-list">
+                                <li><strong>RD0 Long Asia/London/NY</strong>: Bullish (long) break starting above RD0
+                                </li>
+                                <li><strong>SD0 Short Asia/London/NY</strong>: Bearish (short) break starting below SD0
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.2 Breaks (Column 1)</h5>
+                            <ul class="kai-list">
+                                <li><strong>Number</strong>: Total breaks recorded for that setup and session</li>
+                                <li><strong>Meaning</strong>: Statistical sample on which percentages are based</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.3 Killpips Force (Column 2)</h5>
+                            <p><strong>Percentage value</strong>: Break strength based on ATR and Volume</p>
+                            <p>Interpretation scale:</p>
+                            <ul class="force-scale-list">
+                                <li><span class="force-tag very-strong">120%+</span> Very strong (green)</li>
+                                <li><span class="force-tag strong">90–120%</span> Strong (yellow)</li>
+                                <li><span class="force-tag moderate">70–90%</span> Moderate (orange)</li>
+                                <li><span class="force-tag weak">&lt;70%</span> Weak (red)</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.4 T1% (Column 3)</h5>
+                            <ul class="kai-list">
+                                <li><strong>Percentage</strong>: Breaks reaching Target 1 (RD1 for long, SD1 for short)
+                                </li>
+                                <li><strong>Meaning</strong>: Probability of reaching the first target</li>
+                            </ul>
+                            <p>Thresholds:</p>
+                            <ul class="threshold-list">
+                                <li><span class="threshold high">≥70%</span> High probability (green)</li>
+                                <li><span class="threshold medium">50–70%</span> Medium probability (yellow)</li>
+                                <li><span class="threshold low">&lt;50%</span> Low probability (red)</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.5 T2% (Column 4)</h5>
+                            <p>Percentage of breaks reaching Target 2 (RD2/SD2)</p>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.6 T3% (Column 5)</h5>
+                            <p>Percentage of breaks reaching Target 3 (MAX/MIN)</p>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.7 Retr before T1% (Column 6)</h5>
+                            <p>Percentage of breaks retracing to the opposite level <em>before</em> T1</p>
+                            <ul class="kai-list">
+                                <li>Long: return to SD0 before RD1</li>
+                                <li>Short: return to RD0 before SD1</li>
+                            </ul>
+                            <p>Risk interpretation:</p>
+                            <ul class="risk-list">
+                                <li><span class="risk high">≥50%</span> High failure risk (red)</li>
+                                <li><span class="risk medium">30–50%</span> Medium risk (orange)</li>
+                                <li><span class="risk low">&lt;30%</span> Low risk (green)</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.8 T1 retr% (Column 7)</h5>
+                            <p>Retracement to entry level <em>after</em> T1</p>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.9 T2 retr% (Column 8)</h5>
+                            <p>Retracement to T1 <em>after</em> T2</p>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.10 T3 retr% (Column 9)</h5>
+                            <p>Retracement to T2 <em>after</em> T3</p>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.11 Sideways% (Column 10)</h5>
+                            <p>Sideways movement without targets or retracements</p>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.12 T1 no retr% (Column 11)</h5>
+                            <p>T1 reached without retracement</p>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.13 T2 no retr% (Column 12)</h5>
+                            <p>T2 reached without retracement after T1</p>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>1.14 T3 no retr% (Column 13)</h5>
+                            <p>T3 reached without retracement after T2</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Current Status Section -->
+                    <div class="kai-block">
+                        <h4>2. Current Status Section</h4>
+
+                        <div class="kai-subsection">
+                            <h5>2.1 Current Breaks (Row 8)</h5>
+                            <ul class="kai-list">
+                                <li><strong>Long/Short in [Session]</strong>: Active break</li>
+                                <li><strong>T1:✓ T2:✗ T3:✗</strong>: Target status</li>
+                                <li><strong>No Break</strong>: No active break today</li>
+                                <li><strong>Force</strong>: Current bar Killpips Force</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>2.2 Multi-Timeframe (Row 9)</h5>
+                            <ul class="kai-list">
+                                <li>Weekly / Monthly Long or Short break status</li>
+                                <li>Target status for higher timeframes</li>
+                                <li><strong>Inactive</strong>: No higher timeframe break active</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>2.3 Current Force (Row 10)</h5>
+                            <ul class="kai-list">
+                                <li>Long / Short Killpips Force</li>
+                                <li><strong>ATR Confirm</strong>: Yes/No (&gt;65% of session average)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 3. Scenario Analysis Section -->
+                    <div class="kai-block">
+                        <h4>3. Scenario Analysis Section</h4>
+
+                        <div class="kai-subsection">
+                            <h5>3.1 Current Scenario (Row 11)</h5>
+                            <ul class="kai-list scenario-list">
+                                <li>RANGE</li>
+                                <li>DAILY / WEEKLY / MONTHLY BREAK LONG/SHORT</li>
+                                <li>RETRACEMENT_LONG/SHORT_[PHASE]</li>
+                                <li>POSSIBLE REVERSAL</li>
+                                <li>WAITING</li>
+                                <li>CONFLICT</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>3.2 Operation (Row 12)</h5>
+                            <ul class="kai-list">
+                                <li>Trade from Range</li>
+                                <li>Trade from Break</li>
+                                <li>Trade Weekly/Monthly Break</li>
+                                <li>Wait for clarity</li>
+                                <li>Monitor levels</li>
+                                <li>Consider major profit taking</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>3.3 Reason (Row 13)</h5>
+                            <ul class="kai-list">
+                                <li>Waiting for T1/T2/T3</li>
+                                <li>Range condition</li>
+                                <li>Higher timeframe activation</li>
+                                <li>Both breaks active</li>
+                                <li>No clear condition</li>
+                                <li>Flip detection info</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>3.4 Probability (Row 14)</h5>
+                            <ul class="kai-list">
+                                <li>Extreme → Very Low</li>
+                                <li>Shown also as % when available</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>3.5 Recommendation (Row 15)</h5>
+                            <ul class="kai-list">
+                                <li>Strong signal – Consider entering</li>
+                                <li>Caution – Monitor continuation/reversal</li>
+                                <li>Continuation likely – Consider adding</li>
+                                <li>Potential reversal – Wait for confirmation</li>
+                                <li>Scenario strength and momentum notes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 4. Flip Detection Section -->
+                    <div class="kai-block">
+                        <h4>4. Flip Detection Section (Row 16 – if active)</h4>
+
+                        <div class="kai-subsection">
+                            <h5>Flip Types</h5>
+                            <ul class="kai-list flip-types">
+                                <li>RANGE_TO_BREAK</li>
+                                <li>BREAK_TO_RETRACEMENT</li>
+                                <li>RETRACEMENT_TO_BREAK</li>
+                                <li>OPPOSITE_BREAK</li>
+                            </ul>
+                        </div>
+
+                        <div class="kai-subsection">
+                            <h5>Flip Info</h5>
+                            <ul class="kai-list">
+                                <li>Flip type</li>
+                                <li>Bar number</li>
+                                <li>Session</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 5. Data Quality Section -->
+                    <div class="kai-block">
+                        <h4>5. Data Quality Section (Row 17)</h4>
+                        <ul class="kai-list">
+                            <li>Total Breaks, Long, Short</li>
+                            <li>⚠️ Low Sample / ✓ Good Sample</li>
+                            <li>Insufficient sample warning</li>
+                        </ul>
+                    </div>
+
+                    <!-- 6. Range Detection Section -->
+                    <div class="kai-block">
+                        <h4>6. Range Detection Section (Row 18)</h4>
+                        <ul class="kai-list">
+                            <li><strong>IN RANGE / OUT OF RANGE</strong></li>
+                            <li>RD0 and SD0 values</li>
+                            <li>Range trading recommendation</li>
+                        </ul>
+                    </div>
+
+                    <!-- 7. Footer -->
+                    <div class="kai-block">
+                        <h4>7. Footer (Row 19)</h4>
+                        <p><strong>Killpips K A I</strong> – Indicator name</p>
+                    </div>
+
+                    <!-- 8. Levels Displayed on the Chart -->
+                    <div class="kai-block">
+                        <h4>8. Levels Displayed on the Chart</h4>
+
+                        <div class="kai-levels-grid">
+                            <div class="levels-card">
+                                <h5>Daily Levels</h5>
+                                <ul>
+                                    <li>T3 MAX/MIN</li>
+                                    <li>T2 RD2/SD2</li>
+                                    <li>T1 RD1/SD1</li>
+                                    <li>RD0/SD0</li>
+                                    <li>HV (High Volume)</li>
+                                </ul>
+                            </div>
+                            <div class="levels-card">
+                                <h5>Weekly Levels (Optional)</h5>
+                            </div>
+                            <div class="levels-card">
+                                <h5>Monthly Levels (Optional)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Colors and Legend -->
+                    <div class="kai-block">
+                        <h4>9. Colors and Legend</h4>
+
+                        <div class="kai-colors-grid">
+                            <div class="colors-card">
+                                <h5>Level Colors</h5>
+                                <ul class="color-legend">
+                                    <li><span class="color-swatch" style="background: #ef4444;"></span> Red: T3</li>
+                                    <li><span class="color-swatch" style="background: #f97316;"></span> Orange: T2</li>
+                                    <li><span class="color-swatch" style="background: #eab308;"></span> Yellow: T1</li>
+                                    <li><span class="color-swatch" style="background: #10b981;"></span> Green: Entry
+                                    </li>
+                                    <li><span class="color-swatch" style="background: #6b7280;"></span> Gray: HV</li>
+                                    <li><span class="color-swatch" style="background: #06b6d4;"></span> Cyan: Weekly
+                                    </li>
+                                    <li><span class="color-swatch" style="background: #d946ef;"></span> Magenta: Monthly
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="colors-card">
+                                <h5>Table Colors</h5>
+                                <ul class="color-legend">
+                                    <li><span class="color-swatch" style="background: #10b981;"></span> Green: Strong
+                                    </li>
+                                    <li><span class="color-swatch" style="background: #eab308;"></span> Yellow: Medium
+                                    </li>
+                                    <li><span class="color-swatch" style="background: #f97316;"></span> Orange:
+                                        Medium-low</li>
+                                    <li><span class="color-swatch" style="background: #ef4444;"></span> Red: Weak / high
+                                        risk</li>
+                                    <li><span class="color-swatch" style="background: #ffffff;"></span> White: Info</li>
+                                    <li><span class="color-swatch" style="background: #3b82f6;"></span> Blue: Scenario
+                                        analysis</li>
+                                    <li><span class="color-swatch" style="background: #8b5cf6;"></span> Purple: Flip
+                                        detection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. Alerts and Notifications -->
+                    <div class="kai-block">
+                        <h4>10. Alerts and Notifications</h4>
+                        <ul class="kai-list alerts-list">
+                            <li>🔔 Range detected</li>
+                            <li>🔔 Break detected</li>
+                            <li>🔔 Scenario flip</li>
+                            <li>🔔 Weekly/monthly targets activated</li>
+                            <li>🔔 High probability scenario</li>
+                        </ul>
+                        <p><strong>Alert Frequency:</strong> once_per_bar</p>
+                    </div>
+                </div>
+
+                <!-- PRACTICAL SUMMARY -->
+                <div class="kai-content-section animate-on-scroll">
+                    <h3 class="subsection-title">Practical Summary</h3>
+                    <ul class="kai-summary-list">
+                        <li>✅ Check session statistics before trading</li>
+                        <li>✅ Verify current Killpips Force</li>
+                        <li>✅ Follow Scenario Analysis</li>
+                        <li>✅ Monitor flips</li>
+                        <li>✅ Consider multi-timeframe context</li>
+                        <li>✅ Use colors as quick visual guidance</li>
+                        <li>✅ Enable alerts for key signals</li>
+                    </ul>
+                    <p class="kai-final-note">This table provides a complete overview of both historical statistical
+                        analysis and the current market situation, enabling informed, data-driven trading decisions.</p>
                 </div>
 
             </div>
