@@ -4178,3 +4178,128 @@ body {
     border-radius: 12px;
     border: 1px solid rgba(99, 102, 241, 0.3);
 }
+
+/* ============================================
+   DEEP CHART CONTENT SECTIONS
+   ============================================ */
+.deep-intro-box {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 40px 0;
+}
+
+.deep-intro-text {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.deep-feature-section {
+    margin: 50px 0;
+}
+
+.deep-feature-block {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--accent-cyan);
+}
+
+.deep-feature-block h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.1rem;
+    color: var(--accent-cyan);
+    margin-bottom: 20px;
+}
+
+.deep-feature-block p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.deep-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.deep-feature-list li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.deep-feature-list li:last-child {
+    border-bottom: none;
+}
+
+.deep-feature-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-cyan);
+    font-size: 1.2rem;
+}
+
+.deep-summary-box {
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 40px 0;
+}
+
+.deep-summary-box h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    color: var(--bullish);
+    margin-bottom: 20px;
+}
+
+.deep-summary-box p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.deep-summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.deep-summary-list li {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.deep-summary-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bullish);
+    font-weight: bold;
+}
+
+.deep-summary-note {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(16, 185, 129, 0.2);
+}
